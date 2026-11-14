@@ -20,3 +20,10 @@ proof of one vote per person. Review submissions in the Supabase table editor;
 deleting an idea also deletes its votes. Configure CAPTCHA and monitor Supabase
 usage before relying on the board at scale: anonymous sign-ins and public
 submissions can be abused. The board displays the top 100 ideas.
+
+`ideas-images.sql` adds the public `idea-images` storage bucket and image RPCs
+to the existing schema. Each idea can include up to three JPEG, PNG, or WebP
+images of at most 2 MiB each. Images are public and are not moderated
+automatically. Remove inappropriate images through Supabase Storage; deleting
+an idea does not automatically remove its stored image objects. Failed or
+interrupted uploads may also need cleanup in Storage. Monitor storage usage.

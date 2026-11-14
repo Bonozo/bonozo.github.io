@@ -62,8 +62,14 @@
             <p>Tell us what your bot would do. No account needed.</p>
             <div class="form-field"><label for="idea-title">Give your bot a name</label><input id="idea-title" name="title" type="text" minlength="3" maxlength="80" placeholder="The next big thing" required></div>
             <div class="form-field"><label for="idea-description">What's the idea?</label><textarea id="idea-description" name="description" rows="4" minlength="10" maxlength="500" placeholder="A bot that helps people..." required></textarea></div>
+            <div class="form-field image-field">
+              <label for="idea-images">Add images <span>(optional)</span></label>
+              <input id="idea-images" name="images" type="file" accept="image/jpeg,image/png,image/webp" multiple aria-describedby="image-help">
+              <p id="image-help">Up to 3 images, 2 MB each. JPG, PNG, or WebP.</p>
+              <div id="image-preview" class="image-preview"></div>
+            </div>
             <button class="button button-dark" type="submit">Submit your idea <span aria-hidden="true">↗</span></button>
-            <p class="idea-privacy">Ideas are public. Please don't include personal or confidential information. Submissions are stored by Supabase.</p>
+            <p class="idea-privacy">Ideas and images are public. Please don't include personal or confidential information. Submissions are stored by Supabase.</p>
             <p id="idea-form-status" class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
