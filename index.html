@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111313">
-  <meta name="description" content="Bonozo Bots builds thoughtful automation, AI-powered tools, and digital experiences for a world that never stands still.">
-  <title>Bonozo Bots — Make room for what's next.</title>
+  <meta name="description" content="Share your bot ideas, discover community favorites, and vote for what comes next with Bonozo Bots.">
+  <title>Bonozo Bots — Big ideas for better bots.</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.8/dist/umd/supabase.min.js" defer></script>
@@ -24,21 +24,57 @@
         <span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true"></span>
       </button>
       <nav class="nav" id="primary-nav" aria-label="Main navigation">
+        <a href="#ideas">Idea board</a>
         <a href="#what-we-do">What we do</a>
         <a href="#how-we-work">How we work</a>
-        <a href="#about">The idea</a>
-        <a href="#ideas">Bot ideas</a>
-        <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+        <a href="#contact">Let's talk</a>
+        <a class="nav-cta" href="#idea-form">Share an idea <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
 
   <main id="main">
+    <section class="ideas" id="ideas">
+      <div class="container">
+        <div class="ideas-heading">
+          <div class="ideas-heading-copy">
+            <p class="ideas-eyebrow"><span class="status-dot"></span> THE BONOZO BOTS IDEA BOARD</p>
+            <h1>Big ideas.<br><em>Better bots.</em></h1>
+            <p>A little spark can become the next big thing. Share your bot idea, discover community favorites, and vote for what you want to see.</p>
+            <div class="ideas-actions">
+              <a class="button button-dark" href="#idea-form">Share your idea <span aria-hidden="true">↘</span></a>
+              <a class="text-link" href="#ideas-list">Explore the board <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+          <div class="ideas-stamp" aria-hidden="true"><span>MADE FOR<br>THE CURIOUS</span><b>✳</b><span>IDEAS IN<br>MOTION</span></div>
+        </div>
+        <div class="ideas-layout">
+          <div class="ideas-board">
+            <div class="board-header"><div><span class="board-kicker">THE COMMUNITY IDEA BOARD</span><h2>Ideas on the rise <span>✳</span></h2></div><span class="board-sort">TOP VOTED ↓</span></div>
+            <p id="ideas-status" class="ideas-status" role="status" aria-live="polite">Loading ideas...</p>
+            <div id="ideas-list" class="ideas-list"></div>
+            <noscript><p class="ideas-status">Enable JavaScript to view and submit ideas.</p></noscript>
+            <p class="board-note">Showing the top 100 ideas. Votes are tied to this browser and may not prevent repeat voting across devices.</p>
+          </div>
+          <form id="idea-form" class="idea-form">
+            <div class="form-heading"><span>GOT A LITTLE SPARK?</span><span aria-hidden="true">✦</span></div>
+            <h2>Share your<br><em>bright idea.</em></h2>
+            <p>Tell us what your bot would do. No account needed.</p>
+            <div class="form-field"><label for="idea-title">Give your bot a name</label><input id="idea-title" name="title" type="text" minlength="3" maxlength="80" placeholder="The next big thing" required></div>
+            <div class="form-field"><label for="idea-description">What's the idea?</label><textarea id="idea-description" name="description" rows="4" minlength="10" maxlength="500" placeholder="A bot that helps people..." required></textarea></div>
+            <button class="button button-dark" type="submit">Submit your idea <span aria-hidden="true">↗</span></button>
+            <p class="idea-privacy">Ideas are public. Please don't include personal or confidential information. Submissions are stored by Supabase.</p>
+            <p id="idea-form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="hero">
       <div class="hero-grid container">
         <div class="hero-copy">
           <div class="eyebrow"><span class="status-dot"></span> A LITTLE MORE HUMAN. A LOT MORE POSSIBLE.</div>
-          <h1>Good ideas<br>deserve <span class="serif">better</span><br><span class="hero-outline">bots.</span></h1>
+          <h2>Good ideas<br>deserve <span class="serif">better</span><br><span class="hero-outline">bots.</span></h2>
           <p>We turn the things that slow you down into the things that move you forward. Clever automation, useful AI, and digital experiences with a little personality.</p>
           <div class="hero-actions">
             <a class="button button-dark" href="#what-we-do">Explore what we do <span aria-hidden="true">↘</span></a>
@@ -82,7 +118,7 @@
     </div>
 
     <section class="intro section container" id="about">
-      <div class="section-kicker"><span>01 / THE BIG IDEA</span><span class="kicker-line"></span></div>
+      <div class="section-kicker"><span>02 / THE BIG IDEA</span><span class="kicker-line"></span></div>
       <div class="intro-grid">
         <h2>Technology should<br>work <em>for you</em><span class="accent-dot">.</span></h2>
         <div class="intro-copy">
@@ -96,7 +132,7 @@
 
     <section class="services section" id="what-we-do">
       <div class="container">
-        <div class="section-kicker light-kicker"><span>02 / WHAT WE DO</span><span class="kicker-line"></span><span>GOOD THINGS, BUILT BETTER</span></div>
+        <div class="section-kicker light-kicker"><span>03 / WHAT WE DO</span><span class="kicker-line"></span><span>GOOD THINGS, BUILT BETTER</span></div>
         <div class="section-heading">
           <h2>A little bot of<br><em>everything.</em></h2>
           <p>From the first “what if?” to the final finishing touch, we make technology feel less complicated and a lot more useful.</p>
@@ -129,7 +165,7 @@
     </section>
 
     <section class="approach section container" id="how-we-work">
-      <div class="section-kicker"><span>03 / HOW WE WORK</span><span class="kicker-line"></span></div>
+      <div class="section-kicker"><span>04 / HOW WE WORK</span><span class="kicker-line"></span></div>
       <div class="approach-grid">
         <div class="approach-heading">
           <h2>Less complicated.<br><em>More magic.</em></h2>
@@ -140,38 +176,6 @@
           <article class="step"><span class="step-number">01</span><div><h3>Start with a conversation.</h3><p>Tell us what's on your mind, what's getting in the way, or what you wish worked better.</p></div><span class="step-symbol">↗</span></article>
           <article class="step"><span class="step-number">02</span><div><h3>Find the clever way forward.</h3><p>We'll untangle the problem and shape a practical approach around what actually matters to you.</p></div><span class="step-symbol">✳</span></article>
           <article class="step"><span class="step-number">03</span><div><h3>Make something useful.</h3><p>We build, refine, and bring the idea to life with the details and the humans in mind.</p></div><span class="step-symbol">✦</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="ideas section" id="ideas">
-      <div class="container">
-        <div class="section-kicker"><span>04 / THE IDEA BOARD</span><span class="kicker-line"></span><span>POWERED BY YOUR IMAGINATION</span></div>
-        <div class="ideas-heading">
-          <div>
-            <p class="ideas-eyebrow">BIG IDEAS START HERE ✳</p>
-            <h2>Dream it.<br><em>Upvote it.</em></h2>
-          </div>
-          <p>Have an idea for a bot? Put it out into the world. Discover community favorites and give the ideas you love a boost.</p>
-        </div>
-        <div class="ideas-layout">
-          <div class="ideas-board">
-            <div class="board-header"><div><span class="board-kicker">THE COMMUNITY HAS SPOKEN</span><h3>Ideas on the rise <span>✳</span></h3></div><span class="board-sort">TOP VOTED ↓</span></div>
-            <p id="ideas-status" class="ideas-status" role="status" aria-live="polite">Loading ideas...</p>
-            <div id="ideas-list" class="ideas-list"></div>
-            <noscript><p class="ideas-status">Enable JavaScript to view and submit ideas.</p></noscript>
-            <p class="board-note">Showing the top 100 ideas. Votes are tied to this browser and may not prevent repeat voting across devices.</p>
-          </div>
-          <form id="idea-form" class="idea-form">
-            <div class="form-heading"><span>GOT A LITTLE SPARK?</span><span aria-hidden="true">✦</span></div>
-            <h3>Share your<br><em>bright idea.</em></h3>
-            <p>Tell us what your bot would do. No account needed.</p>
-            <div class="form-field"><label for="idea-title">Give your bot a name</label><input id="idea-title" name="title" type="text" minlength="3" maxlength="80" placeholder="The next big thing" required></div>
-            <div class="form-field"><label for="idea-description">What's the idea?</label><textarea id="idea-description" name="description" rows="4" minlength="10" maxlength="500" placeholder="A bot that helps people..." required></textarea></div>
-            <button class="button button-dark" type="submit">Submit your idea <span aria-hidden="true">↗</span></button>
-            <p class="idea-privacy">Ideas are public. Please don't include personal or confidential information. Submissions are stored by Supabase.</p>
-            <p id="idea-form-status" class="form-status" role="status" aria-live="polite"></p>
-          </form>
         </div>
       </div>
     </section>

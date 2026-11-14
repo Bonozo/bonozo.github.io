@@ -33,7 +33,7 @@ if (!window.supabase) {
       rank.textContent = String(index + 1).padStart(2, '0');
       const content = document.createElement('div');
       content.className = 'idea-card-content';
-      const title = document.createElement('h4');
+      const title = document.createElement('h3');
       title.textContent = idea.title;
       const description = document.createElement('p');
       description.textContent = idea.description;
