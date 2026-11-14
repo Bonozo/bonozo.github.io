@@ -11,3 +11,12 @@ the form once and confirm the activation email sent to the address in the form's
 `action`. FormSubmit handles the spam check and confirmation page. The address
 in the form action is public; update it there if the destination changes, and
 confirm the new address with FormSubmit.
+
+The idea board uses the Bonozo Bots Supabase project. `ideas-schema.sql` defines
+the tables and narrowly scoped RPC functions; `ideas.js` uses the project's
+public publishable key. Anonymous sign-ins must be enabled. Ideas are public,
+and anonymous sessions provide one vote per idea per browser session, not
+proof of one vote per person. Review submissions in the Supabase table editor;
+deleting an idea also deletes its votes. Configure CAPTCHA and monitor Supabase
+usage before relying on the board at scale: anonymous sign-ins and public
+submissions can be abused. The board displays the top 100 ideas.

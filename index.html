@@ -8,7 +8,9 @@
   <title>Bonozo Bots — Make room for what's next.</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.8/dist/umd/supabase.min.js" defer></script>
   <script src="script.js" defer></script>
+  <script src="ideas.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -25,6 +27,7 @@
         <a href="#what-we-do">What we do</a>
         <a href="#how-we-work">How we work</a>
         <a href="#about">The idea</a>
+        <a href="#ideas">Bot ideas</a>
         <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
@@ -141,10 +144,42 @@
       </div>
     </section>
 
+    <section class="ideas section" id="ideas">
+      <div class="container">
+        <div class="section-kicker"><span>04 / THE IDEA BOARD</span><span class="kicker-line"></span><span>POWERED BY YOUR IMAGINATION</span></div>
+        <div class="ideas-heading">
+          <div>
+            <p class="ideas-eyebrow">BIG IDEAS START HERE ✳</p>
+            <h2>Dream it.<br><em>Upvote it.</em></h2>
+          </div>
+          <p>Have an idea for a bot? Put it out into the world. Discover community favorites and give the ideas you love a boost.</p>
+        </div>
+        <div class="ideas-layout">
+          <div class="ideas-board">
+            <div class="board-header"><div><span class="board-kicker">THE COMMUNITY HAS SPOKEN</span><h3>Ideas on the rise <span>✳</span></h3></div><span class="board-sort">TOP VOTED ↓</span></div>
+            <p id="ideas-status" class="ideas-status" role="status" aria-live="polite">Loading ideas...</p>
+            <div id="ideas-list" class="ideas-list"></div>
+            <noscript><p class="ideas-status">Enable JavaScript to view and submit ideas.</p></noscript>
+            <p class="board-note">Showing the top 100 ideas. Votes are tied to this browser and may not prevent repeat voting across devices.</p>
+          </div>
+          <form id="idea-form" class="idea-form">
+            <div class="form-heading"><span>GOT A LITTLE SPARK?</span><span aria-hidden="true">✦</span></div>
+            <h3>Share your<br><em>bright idea.</em></h3>
+            <p>Tell us what your bot would do. No account needed.</p>
+            <div class="form-field"><label for="idea-title">Give your bot a name</label><input id="idea-title" name="title" type="text" minlength="3" maxlength="80" placeholder="The next big thing" required></div>
+            <div class="form-field"><label for="idea-description">What's the idea?</label><textarea id="idea-description" name="description" rows="4" minlength="10" maxlength="500" placeholder="A bot that helps people..." required></textarea></div>
+            <button class="button button-dark" type="submit">Submit your idea <span aria-hidden="true">↗</span></button>
+            <p class="idea-privacy">Ideas are public. Please don't include personal or confidential information. Submissions are stored by Supabase.</p>
+            <p id="idea-form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
       <div class="contact-inner container">
         <div class="contact-star" aria-hidden="true">✳</div>
-        <div class="section-kicker"><span>04 / YOUR TURN</span><span class="kicker-line"></span><span>LET'S MAKE SOMETHING GOOD</span></div>
+        <div class="section-kicker"><span>05 / YOUR TURN</span><span class="kicker-line"></span><span>LET'S MAKE SOMETHING GOOD</span></div>
         <div class="contact-grid">
           <div class="contact-intro">
             <p class="contact-pretitle">HAVE AN IDEA? A QUESTION? A “WHAT IF?”</p>
